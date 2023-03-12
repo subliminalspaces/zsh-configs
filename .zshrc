@@ -24,10 +24,10 @@ ZSH_THEME="robbyrussell"
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -68,7 +68,63 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    aws
+    catimg
+    colored-man-pages
+    colorize
+    command-not-found
+    cp
+    dirpersist
+    encode64
+    extract
+    gatsby
+    gem
+    gh
+    golang
+    jsontools
+    last-working-dir
+    nmap
+    node
+    npm
+    nvm
+    pm2
+    rails
+    pyenv
+    pylint
+    python
+    ripgrep
+    rsync
+    rust
+    safe-paste
+    systemd
+    terraform
+    encode64
+    web-search
+    yarn
+    #
+    ##plugins for theming
+    #themes
+    #git-prompt
+    #branch 
+    #battery
+    #
+    ##optional plugins
+    #dotenv
+    #docker
+    #docker-compose
+    #docker-machine
+    #ubuntu
+    #archlinux
+    #deno
+    
+    ##toys lol
+    #rand-quote
+    #fortune
+    #lol
+    #chucknorris
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,6 +158,6 @@ source $ZSH/oh-my-zsh.sh
 alias ls="lsd"
 
 source $HOME/.config/zsh/.zshremap
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #eval "$(starship init zsh)"
