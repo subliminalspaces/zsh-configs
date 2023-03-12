@@ -150,3 +150,123 @@ bindkey -M vicmd "y" vi-yank
 bindkey -M vicmd "|" vi-goto-column
 bindkey -M vicmd "~" vi-swap-case
 bindkey -M vicmd "^?" backward-delete-char
+
+bindkey -D viopp
+bindkey -N viopp
+
+bindkey -M viopp "^[" vi-cmd-mode
+bindkey -M viopp "^[OA" up-line
+bindkey -M viopp "^[OB" down-line
+bindkey -M viopp "^[[A" up-line
+bindkey -M viopp "^[[B" down-line
+bindkey -M viopp "aW" select-a-blank-word
+bindkey -M viopp "aa" select-a-shell-word
+bindkey -M viopp "aw" select-a-word
+bindkey -M viopp "iW" select-in-blank-word
+bindkey -M viopp "ia" select-in-shell-word
+bindkey -M viopp "iw" select-in-word
+bindkey -M viopp "j" down-line
+bindkey -M viopp "k" up-line
+
+bindkey -D visual
+bindkey -N visual
+
+bindkey -M visual "^[" deactivate-region
+bindkey -M visual "^[OA" up-line
+bindkey -M visual "^[OB" down-line
+bindkey -M visual "^[[A" up-line
+bindkey -M visual "^[[B" down-line
+bindkey -M visual "U" vi-up-case
+bindkey -M visual "aW" select-a-blank-word
+bindkey -M visual "aa" select-a-shell-word
+bindkey -M visual "aw" select-a-word
+bindkey -M visual "iW" select-in-blank-word
+bindkey -M visual "ia" select-in-shell-word
+bindkey -M visual "iw" select-in-word
+bindkey -M visual "j" down-line
+bindkey -M visual "k" up-line
+bindkey -M visual "o" exchange-point-and-mark
+bindkey -M visual "p" put-replace-selection
+bindkey -M visual "u" vi-down-case
+bindkey -M visual "x" vi-delete
+bindkey -M visual "~" vi-oper-swap-case
+
+#map is protected from deletion
+bindkey -M menuselect "^I" complete-word
+bindkey -M menuselect "^J" accept-line
+bindkey -M menuselect "^M" accept-line
+bindkey -M menuselect "^O" accept-and-infer-next-history
+bindkey -M menuselect "^[OA" up-line-or-history
+bindkey -M menuselect "^[OB" down-line-or-history
+bindkey -M menuselect "^[OC" forward-char
+bindkey -M menuselect "^[OD" backward-char
+bindkey -M menuselect "^[[A" up-line-or-history
+bindkey -M menuselect "^[[B" down-line-or-history
+bindkey -M menuselect "^[[C" forward-char
+bindkey -M menuselect "^[[D" backward-char
+
+#map is protected from deletion
+bindkey -M main "^A"-"^C" self-insert
+bindkey -M main "^D" list-choices
+bindkey -M main "^E"-"^F" self-insert
+bindkey -M main "^G" list-expand
+bindkey -M main "^H" vi-backward-delete-char
+bindkey -M main "^I" expand-or-complete
+bindkey -M main "^J" accept-line
+bindkey -M main "^K" self-insert
+bindkey -M main "^L" clear-screen
+bindkey -M main "^M" accept-line
+bindkey -M main "^N"-"^P" self-insert
+bindkey -M main "^Q" vi-quoted-insert
+bindkey -M main "^R" redisplay
+bindkey -M main "^S"-"^T" self-insert
+bindkey -M main "^U" vi-kill-line
+bindkey -M main "^V" vi-quoted-insert
+bindkey -M main "^W" vi-backward-kill-word
+bindkey -M main "^Y"-"^Z" self-insert
+bindkey -M main "^[" vi-cmd-mode
+bindkey -M main "^[OA" up-line-or-beginning-search
+bindkey -M main "^[OB" down-line-or-beginning-search
+bindkey -M main "^[OC" vi-forward-char
+bindkey -M main "^[OD" vi-backward-char
+bindkey -M main "^[OF" end-of-line
+bindkey -M main "^[OH" beginning-of-line
+bindkey -M main "^[[1;5C" forward-word
+bindkey -M main "^[[1;5D" backward-word
+bindkey -M main "^[[200~" bracketed-paste
+bindkey -M main "^[[2~" overwrite-mode
+bindkey -M main "^[[3;5~" kill-word
+bindkey -M main "^[[3~" delete-char
+bindkey -M main "^[[5~" up-line-or-history
+bindkey -M main "^[[6~" down-line-or-history
+bindkey -M main "^[[A" up-line-or-history
+bindkey -M main "^[[B" down-line-or-history
+bindkey -M main "^[[C" vi-forward-char
+bindkey -M main "^[[D" vi-backward-char
+bindkey -M main "^[[Z" reverse-menu-complete
+bindkey -M main "^\\\\"-"~" self-insert
+bindkey -M main "^?" backward-delete-char
+bindkey -M main "\M-^@"-"\M-^?" self-insert
+
+
+# map is protected from deletion
+bindkey -M listscroll "^I" complete-word
+bindkey -M listscroll "^J" accept-line
+bindkey -M listscroll "^M" accept-line
+bindkey -M listscroll "^[OB" down-line-or-history
+bindkey -M listscroll "^[[B" down-line-or-history
+bindkey -M listscroll " " complete-word
+
+bindkey -D command
+bindkey -N command
+
+bindkey -M command "^G" send-break
+bindkey -M command "^J" accept-line
+bindkey -M command "^M" accept-line
+
+# this map can never be altered
+# bindkey -M .safe "^@"-"^I" .self-insert
+# bindkey -M .safe "^J" .accept-line
+# bindkey -M .safe "^K"-"^L" .self-insert
+# bindkey -M .safe "^M" .accept-line
+# bindkey -M .safe "^N"-"\M-^?" .self-insert
