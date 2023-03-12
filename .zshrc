@@ -71,7 +71,6 @@ zstyle ':omz:update' frequency 13
 plugins=(
     git
     aws
-    catimg
     colored-man-pages
     colorize
     command-not-found
@@ -115,7 +114,7 @@ plugins=(
     #docker
     #docker-compose
     #docker-machine
-    #ubuntu
+    ubuntu
     #archlinux
     #deno
     
