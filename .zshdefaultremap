@@ -1,0 +1,272 @@
+bindkey -v
+bindkey -D viins
+bindkey -N viins
+
+bindkey -M viins "^A"-"^C" self-insert
+bindkey -M viins "^D" list-choices
+bindkey -M viins "^E"-"^F" self-insert
+bindkey -M viins "^G" list-expand
+bindkey -M viins "^H" vi-backward-delete-char
+bindkey -M viins "^I" expand-or-complete
+bindkey -M viins "^J" accept-line
+bindkey -M viins "^K" self-insert
+bindkey -M viins "^L" clear-screen
+bindkey -M viins "^M" accept-line
+bindkey -M viins "^N"-"^P" self-insert
+bindkey -M viins "^Q" vi-quoted-insert
+bindkey -M viins "^R" redisplay
+bindkey -M viins "^S"-"^T" self-insert
+bindkey -M viins "^U" vi-kill-line
+bindkey -M viins "^V" vi-quoted-insert
+bindkey -M viins "^W" vi-backward-kill-word
+bindkey -M viins "^Y"-"^Z" self-insert
+bindkey -M viins "^[" vi-cmd-mode
+bindkey -M viins "^[OA" up-line-or-beginning-search
+bindkey -M viins "^[OB" down-line-or-beginning-search
+bindkey -M viins "^[OC" vi-forward-char
+bindkey -M viins "^[OD" vi-backward-char
+bindkey -M viins "^[OF" end-of-line
+bindkey -M viins "^[OH" beginning-of-line
+bindkey -M viins "^[[1;5C" forward-word
+bindkey -M viins "^[[1;5D" backward-word
+bindkey -M viins "^[[200~" bracketed-paste
+bindkey -M viins "^[[2~" overwrite-mode
+bindkey -M viins "^[[3;5~" kill-word
+bindkey -M viins "^[[3~" delete-char
+bindkey -M viins "^[[5~" up-line-or-history
+bindkey -M viins "^[[6~" down-line-or-history
+bindkey -M viins "^[[A" up-line-or-history
+bindkey -M viins "^[[B" down-line-or-history
+bindkey -M viins "^[[C" vi-forward-char
+bindkey -M viins "^[[D" vi-backward-char
+bindkey -M viins "^[[Z" reverse-menu-complete
+bindkey -M viins "^\\\\"-"~" self-insert
+bindkey -M viins "^?" backward-delete-char
+bindkey -M viins "\\M-^@"-"\\M-^?" self-insert
+
+bindkey -D vicmd
+bindkey -N vicmd
+bindkey -M vicmd "^D" list-choices
+bindkey -M vicmd "^G" list-expand
+bindkey -M vicmd "^H" vi-backward-char
+bindkey -M vicmd "^J" accept-line
+bindkey -M vicmd "^L" clear-screen
+bindkey -M vicmd "^M" accept-line
+bindkey -M vicmd "^N" down-history
+bindkey -M vicmd "^P" up-history
+bindkey -M vicmd "^R" redo
+bindkey -M vicmd "^[" beep
+bindkey -M vicmd "^[OA" up-line-or-beginning-search
+bindkey -M vicmd "^[OB" down-line-or-beginning-search
+bindkey -M vicmd "^[OC" vi-forward-char
+bindkey -M vicmd "^[OD" vi-backward-char
+bindkey -M vicmd "^[OF" end-of-line
+bindkey -M vicmd "^[OH" beginning-of-line
+bindkey -M vicmd "^[[1;5C" forward-word
+bindkey -M vicmd "^[[1;5D" backward-word
+bindkey -M vicmd "^[[200~" bracketed-paste
+bindkey -M vicmd "^[[2~" vi-insert
+bindkey -M vicmd "^[[3;5~" kill-word
+bindkey -M vicmd "^[[3~" delete-char
+bindkey -M vicmd "^[[5~" up-line-or-history
+bindkey -M vicmd "^[[6~" down-line-or-history
+bindkey -M vicmd "^[[A" up-line-or-history
+bindkey -M vicmd "^[[B" down-line-or-history
+bindkey -M vicmd "^[[C" vi-forward-char
+bindkey -M vicmd "^[[D" vi-backward-char
+bindkey -M vicmd "^[[Z" reverse-menu-complete
+bindkey -M vicmd " " vi-forward-char
+bindkey -M vicmd "\"" vi-set-buffer
+bindkey -M vicmd "#" pound-insert
+bindkey -M vicmd "\$" vi-end-of-line
+bindkey -M vicmd "%" vi-match-bracket
+bindkey -M vicmd "'" vi-goto-mark-line
+bindkey -M vicmd "+" vi-down-line-or-history
+bindkey -M vicmd "," vi-rev-repeat-find
+bindkey -M vicmd "." vi-repeat-change
+bindkey -M vicmd "/" vi-history-search-backward
+bindkey -M vicmd "0" vi-digit-or-beginning-of-line
+bindkey -M vicmd "1-9" digit-argument
+bindkey -M vicmd ":" execute-named-cmd
+bindkey -M vicmd ";" vi-repeat-find
+bindkey -M vicmd "<" vi-unindent
+bindkey -M vicmd "=" list-choices
+bindkey -M vicmd ">" vi-indent
+bindkey -M vicmd "?" vi-history-search-forward
+bindkey -M vicmd "A" vi-add-eol
+bindkey -M vicmd "B" vi-backward-blank-word
+bindkey -M vicmd "C" vi-change-eol
+bindkey -M vicmd "D" vi-kill-eol
+bindkey -M vicmd "E" vi-forward-blank-word-end
+bindkey -M vicmd "F" vi-find-prev-char
+bindkey -M vicmd "G" vi-fetch-history
+bindkey -M vicmd "I" vi-insert-bol
+bindkey -M vicmd "J" vi-join
+bindkey -M vicmd "N" vi-rev-repeat-search
+bindkey -M vicmd "O" vi-open-line-above
+bindkey -M vicmd "P" vi-put-before
+bindkey -M vicmd "R" vi-replace
+bindkey -M vicmd "S" vi-change-whole-line
+bindkey -M vicmd "T" vi-find-prev-char-skip
+bindkey -M vicmd "V" visual-line-mode
+bindkey -M vicmd "W" vi-forward-blank-word
+bindkey -M vicmd "X" vi-backward-delete-char
+bindkey -M vicmd "Y" vi-yank-whole-line
+bindkey -M vicmd "\^" vi-first-non-blank
+bindkey -M vicmd "\`" vi-goto-mark
+bindkey -M vicmd "a" vi-add-next
+bindkey -M vicmd "b" vi-backward-word
+bindkey -M vicmd "c" vi-change
+bindkey -M vicmd "d" vi-delete
+bindkey -M vicmd "e" vi-forward-word-end
+bindkey -M vicmd "f" vi-find-next-char
+bindkey -M vicmd "gE" vi-backward-blank-word-end
+bindkey -M vicmd "gU" vi-up-case
+bindkey -M vicmd "gUU" gUgU
+bindkey -M vicmd "ga" what-cursor-position
+bindkey -M vicmd "ge" vi-backward-word-end
+bindkey -M vicmd "gg" beginning-of-buffer-or-history
+bindkey -M vicmd "gu" vi-down-case
+bindkey -M vicmd "guu" gugu
+bindkey -M vicmd "g~" vi-oper-swap-case
+bindkey -M vicmd "g~~" g~g~
+bindkey -M vicmd "h" vi-backward-char
+bindkey -M vicmd "i" vi-insert
+bindkey -M vicmd "j" down-line-or-history
+bindkey -M vicmd "k" up-line-or-history
+bindkey -M vicmd "l" vi-forward-char
+bindkey -M vicmd "m" vi-set-mark
+bindkey -M vicmd "n" vi-repeat-search
+bindkey -M vicmd "o" vi-open-line-below
+bindkey -M vicmd "p" vi-put-after
+bindkey -M vicmd "r" vi-replace-chars
+bindkey -M vicmd "s" vi-substitute
+bindkey -M vicmd "t" vi-find-next-char-skip
+bindkey -M vicmd "u" undo
+bindkey -M vicmd "v" visual-mode
+bindkey -M vicmd "w" vi-forward-word
+bindkey -M vicmd "x" vi-delete-char
+bindkey -M vicmd "y" vi-yank
+bindkey -M vicmd "|" vi-goto-column
+bindkey -M vicmd "~" vi-swap-case
+bindkey -M vicmd "^?" backward-delete-char
+
+bindkey -D viopp
+bindkey -N viopp
+
+bindkey -M viopp "^[" vi-cmd-mode
+bindkey -M viopp "^[OA" up-line
+bindkey -M viopp "^[OB" down-line
+bindkey -M viopp "^[[A" up-line
+bindkey -M viopp "^[[B" down-line
+bindkey -M viopp "aW" select-a-blank-word
+bindkey -M viopp "aa" select-a-shell-word
+bindkey -M viopp "aw" select-a-word
+bindkey -M viopp "iW" select-in-blank-word
+bindkey -M viopp "ia" select-in-shell-word
+bindkey -M viopp "iw" select-in-word
+bindkey -M viopp "j" down-line
+bindkey -M viopp "k" up-line
+
+bindkey -D visual
+bindkey -N visual
+
+bindkey -M visual "^[" deactivate-region
+bindkey -M visual "^[OA" up-line
+bindkey -M visual "^[OB" down-line
+bindkey -M visual "^[[A" up-line
+bindkey -M visual "^[[B" down-line
+bindkey -M visual "U" vi-up-case
+bindkey -M visual "aW" select-a-blank-word
+bindkey -M visual "aa" select-a-shell-word
+bindkey -M visual "aw" select-a-word
+bindkey -M visual "iW" select-in-blank-word
+bindkey -M visual "ia" select-in-shell-word
+bindkey -M visual "iw" select-in-word
+bindkey -M visual "j" down-line
+bindkey -M visual "k" up-line
+bindkey -M visual "o" exchange-point-and-mark
+bindkey -M visual "p" put-replace-selection
+bindkey -M visual "u" vi-down-case
+bindkey -M visual "x" vi-delete
+bindkey -M visual "~" vi-oper-swap-case
+
+#map is protected from deletion
+bindkey -M menuselect "^I" complete-word
+bindkey -M menuselect "^J" accept-line
+bindkey -M menuselect "^M" accept-line
+bindkey -M menuselect "^O" accept-and-infer-next-history
+bindkey -M menuselect "^[OA" up-line-or-history
+bindkey -M menuselect "^[OB" down-line-or-history
+bindkey -M menuselect "^[OC" forward-char
+bindkey -M menuselect "^[OD" backward-char
+bindkey -M menuselect "^[[A" up-line-or-history
+bindkey -M menuselect "^[[B" down-line-or-history
+bindkey -M menuselect "^[[C" forward-char
+bindkey -M menuselect "^[[D" backward-char
+
+#map is protected from deletion
+bindkey -M main "^A"-"^C" self-insert
+bindkey -M main "^D" list-choices
+bindkey -M main "^E"-"^F" self-insert
+bindkey -M main "^G" list-expand
+bindkey -M main "^H" vi-backward-delete-char
+bindkey -M main "^I" expand-or-complete
+bindkey -M main "^J" accept-line
+bindkey -M main "^K" self-insert
+bindkey -M main "^L" clear-screen
+bindkey -M main "^M" accept-line
+bindkey -M main "^N"-"^P" self-insert
+bindkey -M main "^Q" vi-quoted-insert
+bindkey -M main "^R" redisplay
+bindkey -M main "^S"-"^T" self-insert
+bindkey -M main "^U" vi-kill-line
+bindkey -M main "^V" vi-quoted-insert
+bindkey -M main "^W" vi-backward-kill-word
+bindkey -M main "^Y"-"^Z" self-insert
+bindkey -M main "^[" vi-cmd-mode
+bindkey -M main "^[OA" up-line-or-beginning-search
+bindkey -M main "^[OB" down-line-or-beginning-search
+bindkey -M main "^[OC" vi-forward-char
+bindkey -M main "^[OD" vi-backward-char
+bindkey -M main "^[OF" end-of-line
+bindkey -M main "^[OH" beginning-of-line
+bindkey -M main "^[[1;5C" forward-word
+bindkey -M main "^[[1;5D" backward-word
+bindkey -M main "^[[200~" bracketed-paste
+bindkey -M main "^[[2~" overwrite-mode
+bindkey -M main "^[[3;5~" kill-word
+bindkey -M main "^[[3~" delete-char
+bindkey -M main "^[[5~" up-line-or-history
+bindkey -M main "^[[6~" down-line-or-history
+bindkey -M main "^[[A" up-line-or-history
+bindkey -M main "^[[B" down-line-or-history
+bindkey -M main "^[[C" vi-forward-char
+bindkey -M main "^[[D" vi-backward-char
+bindkey -M main "^[[Z" reverse-menu-complete
+bindkey -M main "^\\\\"-"~" self-insert
+bindkey -M main "^?" backward-delete-char
+bindkey -M main "\M-^@"-"\M-^?" self-insert
+
+
+# map is protected from deletion
+bindkey -M listscroll "^I" complete-word
+bindkey -M listscroll "^J" accept-line
+bindkey -M listscroll "^M" accept-line
+bindkey -M listscroll "^[OB" down-line-or-history
+bindkey -M listscroll "^[[B" down-line-or-history
+bindkey -M listscroll " " complete-word
+
+bindkey -D command
+bindkey -N command
+
+bindkey -M command "^G" send-break
+bindkey -M command "^J" accept-line
+bindkey -M command "^M" accept-line
+
+# this map can never be altered
+# bindkey -M .safe "^@"-"^I" .self-insert
+# bindkey -M .safe "^J" .accept-line
+# bindkey -M .safe "^K"-"^L" .self-insert
+# bindkey -M .safe "^M" .accept-line
+# bindkey -M .safe "^N"-"\M-^?" .self-insert
