@@ -192,18 +192,18 @@ bindkey -M visual "x" vi-delete
 bindkey -M visual "~" vi-oper-swap-case
 
 #map is protected from deletion
-bindkey -M menuselect "^I" complete-word
-bindkey -M menuselect "^J" accept-line
-bindkey -M menuselect "^M" accept-line
-bindkey -M menuselect "^O" accept-and-infer-next-history
-bindkey -M menuselect "^[OA" up-line-or-history
-bindkey -M menuselect "^[OB" down-line-or-history
-bindkey -M menuselect "^[OC" forward-char
-bindkey -M menuselect "^[OD" backward-char
-bindkey -M menuselect "^[[A" up-line-or-history
-bindkey -M menuselect "^[[B" down-line-or-history
-bindkey -M menuselect "^[[C" forward-char
-bindkey -M menuselect "^[[D" backward-char
+# bindkey -M menuselect "^I" complete-word
+# bindkey -M menuselect "^J" accept-line
+# bindkey -M menuselect "^M" accept-line
+# bindkey -M menuselect "^O" accept-and-infer-next-history
+# bindkey -M menuselect "^[OA" up-line-or-history
+# bindkey -M menuselect "^[OB" down-line-or-history
+# bindkey -M menuselect "^[OC" forward-char
+# bindkey -M menuselect "^[OD" backward-char
+# bindkey -M menuselect "^[[A" up-line-or-history
+# bindkey -M menuselect "^[[B" down-line-or-history
+# bindkey -M menuselect "^[[C" forward-char
+# bindkey -M menuselect "^[[D" backward-char
 
 #map is protected from deletion
 bindkey -M main "^A"-"^C" self-insert
@@ -250,12 +250,12 @@ bindkey -M main "\M-^@"-"\M-^?" self-insert
 
 
 # map is protected from deletion
-bindkey -M listscroll "^I" complete-word
-bindkey -M listscroll "^J" accept-line
-bindkey -M listscroll "^M" accept-line
-bindkey -M listscroll "^[OB" down-line-or-history
-bindkey -M listscroll "^[[B" down-line-or-history
-bindkey -M listscroll " " complete-word
+# bindkey -M listscroll "^I" complete-word
+# bindkey -M listscroll "^J" accept-line
+# bindkey -M listscroll "^M" accept-line
+# bindkey -M listscroll "^[OB" down-line-or-history
+# bindkey -M listscroll "^[[B" down-line-or-history
+# bindkey -M listscroll " " complete-word
 
 bindkey -D command
 bindkey -N command
