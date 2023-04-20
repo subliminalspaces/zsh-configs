@@ -3,8 +3,10 @@
 # export XDG_CONFIG_HOME="$HOME/.config"
 # export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+export TERMINAL="alacritty"
 alias ls="lsd"
 export VISUAL=
 export EDITOR="$VISUAL"
 export RANGER_LOAD_DEFAULT_RC=false
 export PATH=$PATH:~/.local/bin
+alias cat="bat --paging=never"
