@@ -114,7 +114,7 @@ plugins=(
     #docker
     #docker-compose
     #docker-machine
-    ubuntu
+    #ubuntu
     #archlinux
     #deno
     
@@ -124,6 +124,7 @@ plugins=(
     #lol
     #chucknorris
 )
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -152,7 +153,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# leave empty to allow default zsh-system-clipboard bindings
+# 
+ZSH_SYSTEM_CLIPBOARD_DISABLE_DEFAULT_MAPS=
 
+ZSH_SYSTEM_CLIPBOARD_METHOD=wlc
 
 alias ls="lsd"
 alias cat="bat --paging=never"
@@ -160,6 +166,8 @@ alias rm='rmtrash'
 alias rmdir='rmdirtrash'
 alias sudo='sudo '
 source $HOME/.config/zsh/.zshremap
+source /usr/share/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
+
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 eval "$(starship init zsh)"
