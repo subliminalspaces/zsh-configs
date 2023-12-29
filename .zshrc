@@ -127,7 +127,7 @@ plugins=(
 
 
 source $ZSH/oh-my-zsh.sh
-
+source ~/.config/zsh/.nnnrc
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -158,7 +158,8 @@ source $ZSH/oh-my-zsh.sh
 # 
 ZSH_SYSTEM_CLIPBOARD_DISABLE_DEFAULT_MAPS=
 
-ZSH_SYSTEM_CLIPBOARD_METHOD=wlc
+# ZSH_SYSTEM_CLIPBOARD_METHOD=wlc
+ZSH_SYSTEM_CLIPBOARD_METHOD=xcc
 
 alias ls="lsd"
 alias cat="bat --paging=never"
@@ -166,7 +167,7 @@ alias rm='rmtrash'
 alias rmdir='rmdirtrash'
 alias sudo='sudo '
 source $HOME/.config/zsh/.zshremap
-source /usr/share/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
+source /home/abhi/.config/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
 
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
